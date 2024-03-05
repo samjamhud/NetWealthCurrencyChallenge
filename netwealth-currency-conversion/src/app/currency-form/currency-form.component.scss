@@ -1,0 +1,18 @@
+mat-card {
+  background-color: #112e51;
+
+  .mat-mdc-card-title,
+  .mat-mdc-card-subtitle,
+  .mat-mdc-form-field-hint,
+  small {
+    color: #ffffff;
+  }
+}
+
+mat-card-footer {
+  small {
+    float: right;
+    margin-right: 0.5rem;
+    font-weight: 100;
+  }
+}

@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title
+      >{{ conversion?.currencyFrom }} vs.
+      {{ conversion?.currencyTo }}</mat-card-title
+    >
+    <mat-card-subtitle>
+      Rate: {{ conversion?.conversionRate }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="currency-pill">
+      <div class="currency-name">{{ conversion?.currencyFrom }}</div>
+      <div class="currency-amount">{{ conversion?.amount }}</div>
+    </div>
+    =
+    <div class="currency-pill">
+      <div class="currency-name">{{ conversion?.currencyTo }}</div>
+      <div class="currency-amount">{{ conversion?.conversionAmount }}</div>
+    </div>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+  <small
+    >Converted:
+    {{ conversion?.conversionTime | date : "dd/MM/yyyy 'at' HH:mm:ss" }}</small
+  >
+</mat-card>

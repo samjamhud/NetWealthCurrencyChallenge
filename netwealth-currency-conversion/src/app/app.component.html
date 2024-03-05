@@ -1,0 +1,21 @@
+<app-currency-form></app-currency-form>
+
+<mat-grid-list [cols]="screenWidth >= 2560 ? 5 : 4" rowHeight="12rem">
+  <mat-grid-tile
+    *ngFor="let conversion of currencyStore.conversionHistory()"
+    [colspan]="1"
+  >
+    <app-conversion-panel [conversion]="conversion"></app-conversion-panel>
+  </mat-grid-tile>
+  <mat-grid-tile
+    [colspan]="
+      (screenWidth >= 2560 ? 5 : 4) - currencyStore.conversionHistory().length
+    "
+  >
+    <mat-card>
+      <mat-card-content>
+        Use the form above for converting currencies and they'll appear here!
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
